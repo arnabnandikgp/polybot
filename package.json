@@ -1,16 +1,30 @@
 {
   "name": "polybot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Polymarket Post-Resolution Arbitrage Bot",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/ws": "^8.18.1",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@ethersproject/wallet": "^5.8.0",
+    "@polymarket/clob-client": "^4.22.8",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "pino": "^10.1.0",
+    "viem": "^2.40.1",
+    "ws": "^8.18.3"
   }
 }
